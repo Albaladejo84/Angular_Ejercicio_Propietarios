@@ -1,0 +1,40 @@
+<form #formulario="ngForm"></form>
+<div class="row px-3">
+  <div class="col-2">
+    <label>Nombre</label>
+    <input type="text" name="nombre" [(ngModel)]="propietario.nombre" #nombre="ngModel">
+  </div>
+</div>
+<div class="row px-3">
+  <div class="col-2">
+    <label>Apellido1</label>
+    <input type="text" name="apellido1" [(ngModel)]="propietario.apellido1" #apellido1="ngModel">
+  </div>
+</div>
+<div class="row px-3">
+  <div class="col-2">
+    <label>Apellido2</label>
+    <input type="text" name="apellido2" [(ngModel)]="propietario.apellido2" #apellido2="ngModel">
+  </div>
+</div>
+<div class="row px-3">
+  <div class="col-2">
+    <label>NIF</label>
+    <input type="text" name="nif" [(ngModel)]="propietario.nif" #nif="ngModel">
+  </div>
+</div>
+<div class="row px-3">
+  <div class="col-2">
+    <label>MAIL</label>
+    <input type="text" name="mail" [(ngModel)]="propietario.mail" #mail="ngModel">
+  </div>
+</div>
+<br>
+<div *ngIf="propietario.id; else botonNuevo">
+  <button class="btn btn-primary" (click)="enviarCambios()">Enviar cambios</button>
+</div>
+<ng-template #botonNuevo>
+  <button class="btn btn-primary" (click)="enviarNuevo()">Cargar nuevo</button>
+</ng-template>
+
+

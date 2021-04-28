@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-1">{{propietario.nombre}}</div>
+  <div class="col-2">{{propietario.apellido1}}</div>
+  <div class="col-2">{{propietario.apellido2}}</div>
+  <div class="col-2">{{propietario.nif}}</div>
+  <div class="col-3">{{propietario.mail}}</div>
+  <div class="col-1">
+    <button class="btn btn-primary" [routerLink]= "['formulario', propietario.id]">Editar</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-danger" (click)="eliminarPropietario()">Eliminar</button>
+  </div>
+</div>
